@@ -37,6 +37,8 @@ while True:
         # Receives the request message from the client
         message = connectionSocket.recv(DATA_SIZE).decode()
 
+        # This is only necessary because for some reason I can't figure out, neither accept
+        # Nor receive are blocking properly
         if message == '':
             break
 
